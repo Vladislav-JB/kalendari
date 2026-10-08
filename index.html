@@ -1,31 +1,270 @@
 <!doctype html>
-<html lang="ru" data-stub>
+<html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Лендинг: квартальные календари · демо готовится</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Квартальные календари премиум качества · Типограф</title>
+<meta name="description" content="Квартальные календари МИДИ: японская офсетная печать, плотный картон 325 г/м², ламинация, пружины 4 цветов, курсор-пикколо, индивидуальная упаковка.">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="120">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Квартальные календари премиум качества">
+<meta property="og:description" content="Японская офсетная печать, картон 325 г/м², индивидуальная упаковка каждого календаря.">
+<meta property="og:url" content="https://web-atelie.ru/kalendari/">
+<meta property="og:image" content="https://web-atelie.ru/kalendari/assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F3E9C'/%3E%3Crect x='7' y='9' width='18' height='16' rx='2' fill='%23fff'/%3E%3Crect x='7' y='9' width='18' height='5' fill='%23E3202B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F3EE;--ink:#1F1E1C;--muted:#6B655C;--acc:#8A6737}
-@media (prefers-color-scheme:dark){:root{--bg:#161615;--ink:#EDE7DC;--muted:#A9A195;--acc:#C9A66B}}
-*{box-sizing:border-box}html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;display:grid;place-items:center;padding:24px}
-main{max-width:560px;text-align:center;display:flex;flex-direction:column;gap:18px;align-items:center}
-.k{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font-weight:600}
-h1{font:500 clamp(2rem,6vw,3rem)/1.1 "Cormorant Garamond",Georgia,serif;margin:0;text-wrap:balance}
-p{margin:0;color:var(--muted)}
-.bar{width:220px;height:3px;background:color-mix(in srgb,var(--acc) 20%,transparent);border-radius:3px;overflow:hidden}
-.bar i{display:block;height:100%;width:40%;background:var(--acc);animation:m 1.6s ease-in-out infinite}
-@keyframes m{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
-@media (prefers-reduced-motion:reduce){.bar i{animation:none;width:60%}}
+:root{--blue:#1F3E9C;--blue2:#16307D;--red:#D81E28;--ink:#16171B;--soft:#5D6170;--gray:#EEF0F4;--line:#DDE1E8;--f:"Montserrat",system-ui,sans-serif;--wrap:1080px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2{margin:0;text-transform:uppercase;font-weight:700;letter-spacing:.01em;line-height:1.2}
+h2{font-size:clamp(24px,3vw,32px);text-align:center}
+:focus-visible{outline:3px solid #F5B400;outline-offset:3px}
+
+/* шапка */
+.hdr{position:sticky;top:0;z-index:30;background:var(--blue);color:#fff;box-shadow:0 2px 12px rgb(0 0 0 / .15)}
+.hdr__in{display:flex;align-items:center;gap:30px;height:70px}
+.logo{font-weight:800;font-size:26px;letter-spacing:.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{width:30px;height:30px}
+.hdr__c{display:flex;gap:28px;font-size:13px;line-height:1.35;opacity:.92}
+.hdr__c a{text-decoration:none}
+.hdr__c a:hover{text-decoration:underline}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.04em}
+.nav a:hover{color:#FFD15C}
+
+/* баннер */
+.hero{position:relative;color:#fff;text-align:center;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.04);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(14 26 66 / .55),rgb(14 26 66 / .72));z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:110px 20px 100px}
+.hero h1{font-size:clamp(30px,5vw,54px);font-weight:700}
+.hero p{margin:26px 0 0;font-weight:600;font-size:clamp(14px,1.6vw,18px);text-transform:uppercase;letter-spacing:.03em}
+.hero__btn{display:inline-block;margin-top:34px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:16px 30px;border-radius:6px;box-shadow:0 10px 24px rgb(216 30 40 / .35)}
+.hero__btn:hover{filter:brightness(1.08)}
+
+/* качество */
+.quality{margin:40px auto 0;max-width:640px;background:var(--red);color:#fff;text-align:center;text-transform:uppercase;font-weight:600;font-size:clamp(15px,1.8vw,19px);line-height:1.6;padding:22px 26px;border-radius:6px;box-shadow:0 14px 30px rgb(216 30 40 / .22)}
+.quality-note{text-align:center;font-size:11.5px;font-weight:600;text-transform:uppercase;color:var(--soft);margin:14px auto 0;max-width:680px;letter-spacing:.01em}
+
+/* разделы опций */
+.opt{padding:70px 0 0}
+.opt h2{margin-bottom:28px}
+.grid{display:grid;gap:22px;justify-content:center}
+.grid--2{grid-template-columns:repeat(2,minmax(0,250px))}
+.grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.item{display:flex;flex-direction:column;gap:14px;cursor:pointer;background:none;border:0;padding:0;text-align:center;font:inherit;color:inherit}
+.item__lbl{background:var(--blue);color:#fff;text-transform:uppercase;font-weight:600;font-size:15px;padding:13px 10px;border-radius:3px;transition:background .2s,transform .2s}
+.item__ph{background:var(--gray);border-radius:4px;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;position:relative;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s,box-shadow .2s}
+.grid--2 .item__ph{aspect-ratio:5/3}
+.item__ph svg{width:100%;height:100%}
+.item small{display:block;font-size:12.5px;color:var(--soft);margin-top:-6px;line-height:1.4}
+.item:hover .item__lbl,.item.is-on .item__lbl{background:var(--red)}
+.item.is-on .item__ph{outline-color:var(--red);box-shadow:0 10px 24px rgb(0 0 0 / .1)}
+.ph-note{position:absolute;right:8px;bottom:8px;background:rgb(255 255 255 / .85);color:var(--soft);font-size:10.5px;font-weight:600;border-radius:4px;padding:3px 6px;text-transform:uppercase}
+
+/* сравнить и упаковка */
+.compare{display:flex;justify-content:flex-end;margin-top:60px}
+.compare span{display:inline-block;background:var(--red);color:#fff;text-transform:uppercase;font-weight:700;font-size:15px;padding:14px 30px;transform:rotate(-4deg);box-shadow:0 8px 20px rgb(216 30 40 / .3)}
+.pack{margin-top:34px;background:var(--blue);color:#fff;text-align:center;text-transform:uppercase;font-weight:600;font-size:clamp(14px,1.7vw,18px);line-height:1.6;padding:24px 26px;border-radius:8px}
+.pack-ph{margin-top:22px;background:var(--gray);border-radius:6px;aspect-ratio:16/6;overflow:hidden;position:relative}
+.pack-ph svg{width:100%;height:100%}
+
+/* цены */
+.prices{padding:80px 0 0}
+.ptable{margin-top:28px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th{background:var(--blue);color:#fff;font-weight:600;text-transform:uppercase;font-size:13px;letter-spacing:.04em;padding:14px 16px;text-align:center}
+td{padding:14px 16px;text-align:center;border-top:1px solid var(--line)}
+tr:nth-child(even) td{background:#F7F8FB}
+td:first-child,th:first-child{text-align:left}
+td b{color:var(--red)}
+.pnote{margin:14px 0 0;color:var(--soft);font-size:13.5px;text-align:center}
+.inc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.inc div{border:1px solid var(--line);border-radius:8px;padding:14px;font-size:14px;text-align:center}
+.inc b{display:block;color:var(--blue);font-size:15px;text-transform:uppercase}
+
+/* контакты */
+.contacts{margin-top:80px;background:var(--blue2);color:#fff;padding:60px 0}
+.contacts h2{color:#fff}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.cbox{background:rgb(255 255 255 / .08);border:1px solid rgb(255 255 255 / .18);border-radius:8px;padding:22px;text-align:center}
+.cbox small{display:block;text-transform:uppercase;letter-spacing:.06em;font-size:12px;opacity:.75;margin-bottom:6px}
+.cbox a,.cbox span{font-weight:700;font-size:18px;text-decoration:none}
+.cbox a:hover{color:#FFD15C}
+
+/* подвал */
+.foot{background:#0F2361;color:#B9C3E6;font-size:13.5px}
+.foot__in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 24px;padding:22px 20px 32px}
+.foot__demo{flex-basis:100%;font-size:12.5px;color:#8C98C4}
+/* подпись разработчика в подвале: «Создан в «Веб-Ателье»» – одинаковая на всех сайтах, не менять */
+.foot__made{display:inline-block;white-space:nowrap;font-style:italic;font-size:14px;line-height:1.4;color:#B9C3E6;padding:.4em 0}
+.foot__made a{display:inline;margin:0 0 0 .3em;color:inherit;text-decoration:none;font-family:Calibri,"Carlito",sans-serif;font-weight:700;font-style:italic;font-size:1.12em}
+.foot__made a:hover{color:#fff;text-decoration:underline;text-underline-offset:.18em}
+.foot__made img{display:inline-block;width:40px;height:52px;max-width:none;margin-left:.35em;vertical-align:-7px}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.on{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hdr__c{display:none}
+  .grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cgrid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .hdr__in{height:60px;gap:14px}
+  .logo{font-size:20px}
+  .nav{gap:16px}
+  .nav a{font-size:13px}
+  .hero .wrap{padding:80px 18px 70px}
+  .grid--2{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .grid--4{gap:12px}
+  .item__lbl{font-size:13px;padding:11px 6px}
+  .opt{padding-top:54px}
+  .compare{justify-content:center}
+  .pack-ph{aspect-ratio:4/3}
+  table{font-size:14px}
+  th,td{padding:12px 8px}
+  .quality{margin:28px 18px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
-<body><main>
-<div class="k">Демо-версия по вашему ТЗ</div>
-<h1>Лендинг: квартальные календари</h1>
-<div class="bar" aria-hidden="true"><i></i></div>
-<p>Сайт сейчас собирается по вашему техническому заданию.<br>Будет готов сегодня к <b>11:16</b> – по этой же ссылке.</p>
-<p style="font-size:.85rem">Страница обновится сама.</p>
-</main></body></html>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#top"><svg viewBox="0 0 30 30"><rect x="2" y="5" width="26" height="23" rx="3" fill="#fff"/><rect x="2" y="5" width="26" height="7" rx="3" fill="#D81E28"/><rect x="8" y="2" width="3" height="7" rx="1.5" fill="#fff"/><rect x="19" y="2" width="3" height="7" rx="1.5" fill="#fff"/></svg>ТИПОГРАФ</a>
+    <div class="hdr__c"><a href="tel:+79000000000">+7 (900) 000-00-00</a><div><a href="mailto:info@example.ru">info@example.ru</a><br>www.example.ru</div></div>
+    <nav class="nav"><a href="#ceny">Цены</a><a href="#kontakty">Контакты</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="assets/hero.webp" alt="Квартальный календарь на стене крупным планом" width="1920" height="900" fetchpriority="high">
+    <div class="wrap">
+      <h1>Квартальные календари<br>премиум качества</h1>
+      <p>Миди: 335×230 постер, 335×210 подложка, 50 мм рекламное поле</p>
+      <a class="hero__btn" href="#ceny">Узнать цены</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="quality rv">Качество печати японских офсетных машин<br>Плотный картон 325 г/м² (толщиной 0.5 мм)</div>
+    <p class="quality-note rv">Плотность картона с ламинацией равна 510 г/м² · плотность практически равна пластиковой карте 540 мкрн</p>
+
+    <section class="opt" id="laminaciya">
+      <h2 class="rv">Ламинация</h2>
+      <div class="grid grid--2" data-group="lam">
+        <button class="item rv is-on" type="button"><span class="item__lbl">Матовая</span><span class="item__ph" data-svg="lam-mat"></span><small>Бархатистая поверхность, без бликов</small></button>
+        <button class="item rv" type="button"><span class="item__lbl">Глянцевая</span><span class="item__ph" data-svg="lam-gl"></span><small>Яркие цвета и благородный блеск</small></button>
+      </div>
+    </section>
+
+    <section class="opt" id="pruzhina">
+      <h2 class="rv">Пружина</h2>
+      <div class="grid grid--4" data-group="spring">
+        <button class="item rv is-on" type="button"><span class="item__lbl">Белая</span><span class="item__ph" data-svg="spring" data-c="#FFFFFF" data-d="#C9CDD4"></span></button>
+        <button class="item rv" type="button"><span class="item__lbl">Чёрная</span><span class="item__ph" data-svg="spring" data-c="#2A2C31" data-d="#0D0E10"></span></button>
+        <button class="item rv" type="button"><span class="item__lbl">Серебро</span><span class="item__ph" data-svg="spring" data-c="#D9DDE3" data-d="#8A919C"></span></button>
+        <button class="item rv" type="button"><span class="item__lbl">Бронза</span><span class="item__ph" data-svg="spring" data-c="#C9935A" data-d="#7A4F23"></span></button>
+      </div>
+    </section>
+
+    <section class="opt" id="bloki">
+      <h2 class="rv">Блоки</h2>
+      <div class="grid grid--4" data-group="block">
+        <button class="item rv is-on" type="button"><span class="item__lbl">Офсетные</span><span class="item__ph" data-svg="block" data-k="offset"></span><small>Матовая бумага, удобно писать</small></button>
+        <button class="item rv" type="button"><span class="item__lbl">Мелованные</span><span class="item__ph" data-svg="block" data-k="coated"></span><small>Гладкая, яркая печать</small></button>
+        <button class="item rv" type="button"><span class="item__lbl">Серебро</span><span class="item__ph" data-svg="block" data-k="silver"></span><small>Металлизированная бумага</small></button>
+        <button class="item rv" type="button"><span class="item__lbl">Вердана</span><span class="item__ph" data-svg="block" data-k="verdana"></span><small>Дизайнерская фактура</small></button>
+      </div>
+    </section>
+
+    <section class="opt" id="pikkolo">
+      <h2 class="rv">Пикколо</h2>
+      <div class="grid grid--2" data-group="piccolo">
+        <button class="item rv is-on" type="button"><span class="item__lbl">Золото</span><span class="item__ph" data-svg="pic" data-c="#E3B341" data-d="#9C7414"></span><small>Курсор-окошко для текущей даты</small></button>
+        <button class="item rv" type="button"><span class="item__lbl">Серебро</span><span class="item__ph" data-svg="pic" data-c="#D5DAE1" data-d="#7E8794"></span><small>Курсор-окошко для текущей даты</small></button>
+      </div>
+    </section>
+
+    <div class="compare rv"><span>Сравните с конкурентами!</span></div>
+    <div class="pack rv">Каждый календарь упакован в индивидуальный пакет,<br>что придаёт ему премиальный вид и делает прекрасным подарком</div>
+    <div class="pack-ph rv" data-svg="pack"></div>
+
+    <section class="prices" id="ceny">
+      <h2 class="rv">Цены</h2>
+      <div class="ptable rv">
+        <table>
+          <thead><tr><th>Тираж</th><th>Цена за 1 шт.</th><th>Сумма</th></tr></thead>
+          <tbody>
+            <tr><td>50 шт.</td><td>390 ₽</td><td>19 500 ₽</td></tr>
+            <tr><td>100 шт.</td><td>320 ₽</td><td>32 000 ₽</td></tr>
+            <tr><td>300 шт.</td><td>260 ₽</td><td>78 000 ₽</td></tr>
+            <tr><td>500 шт.</td><td>230 ₽</td><td>115 000 ₽</td></tr>
+            <tr><td>1000 шт.</td><td><b>210 ₽</b></td><td>210 000 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="inc rv">
+        <div><b>Ламинация</b>матовая или глянцевая</div>
+        <div><b>Пружина</b>4 цвета на выбор</div>
+        <div><b>Пикколо</b>золото или серебро</div>
+        <div><b>Упаковка</b>индивидуальный пакет</div>
+      </div>
+      <p class="pnote rv">Цены в демо условные. Точная стоимость зависит от тиража, блоков и сроков.</p>
+    </section>
+  </div>
+
+  <section class="contacts" id="kontakty">
+    <div class="wrap">
+      <h2 class="rv">Контакты</h2>
+      <div class="cgrid">
+        <div class="cbox rv"><small>Телефон</small><a href="tel:+79000000000">+7 (900) 000-00-00</a></div>
+        <div class="cbox rv"><small>Почта</small><a href="mailto:info@example.ru">info@example.ru</a></div>
+        <div class="cbox rv"><small>Сайт</small><span>www.example.ru</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© Типограф · квартальные календари</span>
+    <span class="foot__made">Создан в <a href="https://web-atelie.ru/" target="_blank" rel="noopener">«Веб-Ателье»</a><img src="assets/web-atelie.png" alt="" width="40" height="52" loading="lazy" decoding="async"></span>
+    <span class="foot__demo">Демо-концепт лендинга по макету заказчика. Название, контакты и цены условные. Рисунки на серых плашках – образцы, на их место встают фото заказчика.</span>
+  </div>
+</footer>
+
+<script>
+// рисунки-образцы на месте будущих фото
+const NOTE='<span class="ph-note">место для фото</span>';
+const cal=(x,y,w,h)=>{let s=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="#fff" stroke="#D5D9E0"/>`;const cw=w/7,ch=(h-26)/5;s+=`<rect x="${x}" y="${y}" width="${w}" height="18" fill="#1F3E9C"/>`;for(let r=0;r<5;r++)for(let c=0;c<7;c++){s+=`<rect x="${x+c*cw+cw*.25}" y="${y+24+r*ch+ch*.3}" width="${cw*.5}" height="${ch*.35}" rx="1" fill="${c>4?'#D81E28':'#3A3D46'}" opacity=".75"/>`}return s};
+const SVG={
+ 'lam-mat':()=>`<svg viewBox="0 0 250 150"><defs><linearGradient id="lm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B4FB8"/><stop offset="1" stop-color="#1A3283"/></linearGradient></defs><rect x="40" y="22" width="170" height="106" rx="6" fill="url(#lm)"/><text x="125" y="82" font-family="Montserrat" font-weight="700" font-size="17" fill="#fff" opacity=".85" text-anchor="middle">2027</text></svg>`,
+ 'lam-gl':()=>`<svg viewBox="0 0 250 150"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3460E0"/><stop offset="1" stop-color="#1A3283"/></linearGradient><linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="cl"><rect x="40" y="22" width="170" height="106" rx="6"/></clipPath></defs><rect x="40" y="22" width="170" height="106" rx="6" fill="url(#lg)"/><g clip-path="url(#cl)"><rect x="60" y="-20" width="34" height="200" fill="url(#sh)" transform="rotate(25 125 75)"/><rect x="110" y="-20" width="12" height="200" fill="url(#sh)" transform="rotate(25 125 75)"/></g><text x="125" y="82" font-family="Montserrat" font-weight="700" font-size="17" fill="#fff" text-anchor="middle">2027</text></svg>`,
+ spring:(el)=>{const c=el.dataset.c,d=el.dataset.d;let s=`<svg viewBox="0 0 200 150"><rect x="20" y="40" width="160" height="100" rx="3" fill="#fff" stroke="#D5D9E0"/><rect x="20" y="40" width="160" height="24" fill="#1F3E9C"/>`;for(let i=0;i<12;i++){const x=32+i*12.5;s+=`<circle cx="${x}" cy="44" r="2.6" fill="#B8BDC6"/><path d="M${x-3} 46 C ${x-6} 26, ${x+6} 22, ${x+3} 42" fill="none" stroke="${d}" stroke-width="4.6" stroke-linecap="round"/><path d="M${x-3} 46 C ${x-6} 26, ${x+6} 22, ${x+3} 42" fill="none" stroke="${c}" stroke-width="2.8" stroke-linecap="round"/>`}return s+`<rect x="34" y="78" width="132" height="6" rx="2" fill="#E1E4EA"/><rect x="34" y="92" width="100" height="6" rx="2" fill="#E1E4EA"/><rect x="34" y="106" width="118" height="6" rx="2" fill="#E1E4EA"/></svg>`},
+ block:(el)=>{const k=el.dataset.k;const F={offset:['#FBFAF6','#FBFAF6',''],coated:['#FFFFFF','#EEF2F8','<rect x="70" y="10" width="26" height="140" fill="#fff" opacity=".7" transform="rotate(20 100 75)"/>'],silver:['#E9ECF0','#AEB5BF','<rect x="60" y="0" width="30" height="160" fill="#fff" opacity=".55" transform="rotate(20 100 75)"/>'],verdana:['#F3EEE2','#E6DDC8','<g opacity=".35">'+Array.from({length:60},(_,i)=>`<circle cx="${(i*37)%180+10}" cy="${(i*53)%130+10}" r="${(i%3)+.6}" fill="#B9A981"/>`).join('')+'</g>']}[k];
+   return `<svg viewBox="0 0 200 150"><defs><linearGradient id="b${k}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${F[0]}"/><stop offset="1" stop-color="${F[1]}"/></linearGradient><clipPath id="c${k}"><rect x="30" y="18" width="140" height="116" rx="3"/></clipPath></defs><rect x="34" y="22" width="140" height="116" rx="3" fill="#C9CDD4"/><rect x="30" y="18" width="140" height="116" rx="3" fill="url(#b${k})" stroke="#D5D9E0"/><g clip-path="url(#c${k})">${F[2]}</g>${(()=>{let s='';const cw=20,ch=17;for(let r=0;r<5;r++)for(let c=0;c<6;c++)s+=`<text x="${42+c*cw}" y="${48+r*ch}" font-family="Montserrat" font-size="9" font-weight="600" fill="${c>4?'#D81E28':(k==='silver'?'#4A505B':'#3A3D46')}">${r*6+c+1}</text>`;return s})()}</svg>`},
+ pic:(el)=>{const c=el.dataset.c,d=el.dataset.d;let s=`<svg viewBox="0 0 250 150"><defs><linearGradient id="p${c.slice(1)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="${d}"/></linearGradient></defs><rect x="20" y="40" width="210" height="80" rx="3" fill="#fff" stroke="#D5D9E0"/>`;for(let i=0;i<10;i++)s+=`<text x="${34+i*20}" y="${86}" font-family="Montserrat" font-size="13" font-weight="700" fill="${i%7>4?'#D81E28':'#3A3D46'}">${i+12}</text>`;
+   return s+`<rect x="88" y="58" width="30" height="42" rx="3" fill="none" stroke="url(#p${c.slice(1)})" stroke-width="5"/><rect x="88" y="58" width="30" height="42" rx="3" fill="${c}" opacity=".18"/><rect x="20" y="36" width="210" height="6" fill="#1F3E9C"/></svg>`},
+ pack:()=>`<svg viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#fff" stop-opacity=".45"/></linearGradient></defs><rect x="230" y="28" width="180" height="196" rx="4" fill="#fff" stroke="#D5D9E0"/><rect x="230" y="28" width="180" height="40" fill="#1F3E9C"/><text x="320" y="54" font-family="Montserrat" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">2027</text>${cal(246,82,148,54)}${cal(246,144,148,54)}<rect x="218" y="16" width="204" height="216" rx="8" fill="url(#bag)" stroke="#AAB3C2" stroke-width="2"/><rect x="218" y="16" width="204" height="18" rx="6" fill="#DDE3EC" opacity=".8"/><path d="M250 50 L262 200" stroke="#fff" stroke-width="6" opacity=".45" stroke-linecap="round"/></svg>`
+};
+document.querySelectorAll('[data-svg]').forEach(el=>{const f=SVG[el.dataset.svg];if(f)el.innerHTML=f(el)+NOTE});
+// выбор варианта – подсветка
+document.querySelectorAll('[data-group]').forEach(g=>g.querySelectorAll('.item').forEach(b=>b.onclick=()=>{g.querySelectorAll('.item').forEach(x=>x.classList.toggle('is-on',x===b))}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
